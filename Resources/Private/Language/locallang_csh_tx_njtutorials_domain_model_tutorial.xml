@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallang>
+	<meta type="array">
+		<type>CSH</type>
+		<csh_table></csh_table>
+		<description>Context sensitive help labels for the model tutorial by the extension 'nj_tutorials'.</description>
+		<fileId>EXT:tx_njtutorials/Resources/Private/Language/locallang_csh_tx_njtravelsolutions_domain_model_tutorial.xml</fileId>
+		<labelContext type="array"></labelContext>
+	</meta> 
+	<data type="array"> 
+		<languageKey index="default" type="array">
+			<label index="price.alttitle">alternative title</label>
+			<label index="price.description">description</label>
+			<label index="price.details">details</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="duration.alttitle">Angabe in Tagen.</label>
+			<label index="duration.description">Gibt die Reisedauer an.</label>
+			<label index="duration.details">Eingabe einer Ganzzahl.</label>
+			<label index="price.alttitle">Preisangabe in &#163;.</label>
+			<label index="price.description">Gibt den Mindestpreis für die Reise an.</label>
+			<label index="price.details">Es kann eine ganze Zahl, aber auch eine Zahl mit zwei Nachkommastellen eingegeben werden.</label>
+		</languageKey>
+	</data>
+</T3locallang>

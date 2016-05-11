@@ -1,0 +1,15 @@
+{namespace njVH=N1coode\NjTutorials\ViewHelpers}
+<f:if condition="{message}">
+	<f:then>
+		<div class="n1message info">{message}</div>
+	</f:then>
+	<f:else>
+		<div class="{ext.key} {ext.model} {ext.action} clearfix">
+			<ul>
+				<f:for each="{tutorials}" as="tutorial" iteration="tutorialIteration"> 
+					<li><f:link.action extensionName="{ext.name}" pluginName="pi1" action="focus" controller="{ext.controller}" arguments="{tutorial:tutorial.uid}">{tutorial.title}</f:link.action></li>
+				</f:for>
+			</ul>	
+		</div>
+	</f:else>
+</f:if>

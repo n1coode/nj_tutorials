@@ -1,0 +1,9 @@
+{namespace njVH=N1coode\NjTutorials\ViewHelpers}
+{namespace njcVH=N1coode\NjCollection\ViewHelpers}
+	<ul>
+		<f:for each="{comments}" as="comment" iteration="commentsIterator">
+			<li>
+				<f:render partial="Comment/Item" arguments="{comment:'{comment}'}" />
+			</li>
+		</f:for>
+	</ul>

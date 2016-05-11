@@ -1,0 +1,32 @@
+# Plugin configuration
+plugin.tx_njtutorials {
+	settings {
+ 		general {
+			includeJQuery = {$plugin.tx_njtutorials.settings.general.includeJQuery}
+			includeCss = {$plugin.tx_njtutorials.settings.general.includeCss}
+			cssFile = {$plugin.tx_njtutorials.settings.general.cssFile}
+		}
+		
+		model {
+ 			tutorial { 
+				listPid = {$plugin.tx_njtutorials.settings.model.tutorial.listPid}
+				singleViewPid = {$plugin.tx_njtutorials.settings.model.tutorial.singleViewPid}
+				archivePid = {$plugin.tx_njtutorials.settings.model.tutorial.archivePid}
+			}
+		}
+    }
+    
+    persistence {
+		storagePid = {$plugin.tx_njtutorials.persistence.storagePid}
+	}
+	
+	view {
+		templateRootPath = {$plugin.tx_njtutorials.view.templateRootPath}
+		partialRootPath = {$plugin.tx_njtutorials.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_njtutorials.view.layoutRootPath}
+	}
+}
+
+
+temp.njTutorials.pageurl = TEXT
+temp.njTutorials.pageurl = getIndpEnv:TYPO3_REQUEST_URL

@@ -1,0 +1,33 @@
+{namespace njVH=N1coode\NjTutorials\ViewHelpers}
+<f:be.security.ifAuthenticated>
+<div class="tx_njtutorials tutorial index clearfix">
+	<f:if condition="{tutorials}">
+		<f:then>
+		<f:for each="{tutorials}" as="tutorial" iteration="tutorialIterator">
+			<div id="tx_njtutorials_tutorial_tutorial_{tutorial.uid}" class="item">
+				<div class="headline"><h2>{tutorial.title}</h2></div>
+				<div class="creationInfo"><f:format.date format="d.m.Y">{tutorial.crdate}</f:format.date> &ndash; <f:format.date format="H:i">{tutorial.crdate}</f:format.date> Uhr<f:if condition="{tutorial.cruserId}">, {tutorial.cruserId.username}</f:if></div>
+				<f:if condition="{tutorial.tags}">
+					<div class="tags">
+						<f:for each="{tutorial.tags}" as="tag" iteration="tagIterator">
+							<span>{tag.title}</span>
+						</f:for>
+					</div>
+				</f:if>
+				<f:if condition="{tutorial.description}">
+					<div class="content">
+						<f:format.raw>{tutorial.description}</f:format.raw>
+					</div>
+				</f:if>
+				<f:if condition="{tutorial.content}">
+					<f:link.action pageUid="{settings.model.tutorial.singleViewPid}" controller="Tutorial" action="focus" arguments="{tutorial:'{tutorial.uid}'}">weiterlesen</f:link.action>
+				</f:if>
+			</div>
+		</f:for>
+		</f:then>
+		<f:else>
+			Keine Tutorials vorhanden.
+		</f:else>
+	</f:if>
+</div>
+</f:be.security.ifAuthenticated>

@@ -1,0 +1,18 @@
+{namespace f=N1coode\NjCollection\ViewHelpers}
+<f:wrapExtension settings="{ext}">
+	<f:if condition="{category}">
+		<h2>{category.title}</h2>
+	</f:if>
+	<f:if condition="{tutorials}">
+		<f:then>
+			<ul>
+				<f:for each="{tutorials}" as="tutorial" iteration="iterator">
+					<li>{tutorial.title}</li>
+				</f:for>
+			</ul>
+		</f:then>
+		<f:else>
+			No Tutorials found.
+		</f:else>
+	</f:if>
+</f:wrapExtension>

@@ -1,0 +1,126 @@
+ul.file, ul.folder,
+li.file, li.file-code,li.file-text,li.file-image,li.file-pdf,
+li.folder, li.folder-open,
+{}
+
+@font-face {
+	font-family: 'FontAwesome';
+	src:	url('../Fonts/fontawesome-webfont.eot?v=4.3.0');
+	src:	url('../Fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), 
+  			url('../Fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), 
+  			url('../Fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), 
+  			url('../Fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), 
+  			url('../Fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'Titillium';
+    src:	url('../Fonts/TitilliumWeb-Regular-webfont.eot');
+    src:	url('../Fonts/TitilliumWeb-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         	url('../Fonts/TitilliumWeb-Regular-webfont.woff2') format('woff2'),
+         	url('../Fonts/TitilliumWeb-Regular-webfont.woff') format('woff'),
+         	url('../Fonts/TitilliumWeb-Regular-webfont.ttf') format('truetype'),
+         	url('../Fonts/TitilliumWeb-Regular-webfont.svg#titillium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body * { 
+	font-family:Titillium,Helvetica,Sans Serif; font-size:16px; color:#222; 
+	line-height: 150%;
+}
+
+ul {
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+ul.file, ul.folder
+{
+	padding-left: 0;
+	margin-left: 2.14285714em;
+}
+
+ul.file > li, ul.folder > li, ul.icon > li
+{
+	margin-left: -2.14285714em;
+}
+
+ul.file > li:before, ul.folder > li:before, ul.icon > li:before,
+li.folder:before, li.file:before, 
+li.file-code:before, li.file-text:before,li.file-image:before,li.file-pdf:before
+{
+	top: 0.14285714em;
+	width: 2.14285714em;
+	left: -2.14285714em;
+	text-align: center;
+	
+	display: inline-block;
+	
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);
+}
+
+
+ul.file > li:before, li.file:before
+{
+  content: "\f016";
+}
+
+ul.folder > li:before, li.folder:before
+{
+  content: "\f114"; 
+}
+
+
+li.file-code:before
+{
+	content: "\f1c9";
+}
+li.file-text
+{
+	content: "\f0f6";
+}
+li.file-image
+{
+	content: "\f1c5";
+}
+
+li.file-pdf:before
+{
+	content: "\f1c1";
+}
+
+
+li.filelist-level-1
+{	
+	margin-left: 2.14285714em;
+}
+
+li.filelist-level-2
+{
+	margin-left: 4.28571428em;
+	
+}
+
+li.filelist-level-3
+{
+	margin-left: 6.42857142em;
+}
+
+li.filelist-level-4
+{
+	margin-left: 8.57142856em;
+}
+
+li.filelist-level-5 
+{
+	margin-left: 10.71428570em;
+}

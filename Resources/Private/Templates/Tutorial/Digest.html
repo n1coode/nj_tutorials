@@ -1,0 +1,13 @@
+{namespace njVH=N1coode\NjTutorials\ViewHelpers}
+{namespace njcVH=N1coode\NjCollection\ViewHelpers}
+<div class="{ext.key} {ext.domain} {ext.action} row">
+	<f:for each="{latestTutorials}" as="tutorial" iteration="iterator">
+		<div class="item col-md-4">
+			<h3>{tutorial.title}</h3>
+			<f:if condition="{tutorial.teaserImage">
+				<f:image src="{tutorial.teaserImage.uid}" width="400" height="133c" treatIdAsReference="1" />
+			</f:if>
+			<f:format.raw>{tutorial.description}</f:format.raw>
+		</div>
+	</f:for>
+</div>

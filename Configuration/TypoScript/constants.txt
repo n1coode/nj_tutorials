@@ -1,0 +1,37 @@
+plugin.tx_njtutorials {
+	settings {
+ 		general {
+			# cat=plugin.tx_njtutorials_general/enable/20; type=boolean; label=LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:tsce.general.includeJQuery
+			includeJQuery = 0
+			# cat=plugin.tx_njtutorials_general/enable/30; type=boolean; label=LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:tsce.general.includeCss
+			includeCss = 0
+			# cat=plugin.tx_njtutorials_general/file/a; type=string; label=LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:tsce.general.cssFile
+			cssFile =
+		}
+		
+		model {
+			tutorial { 
+				# cat=plugin.tx_njtutorials_model_tutorial/links/10; type=text; label=LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:tsce.tutorial.listPid
+				listPid =
+				# cat=plugin.tx_njtutorials_model_tutorial/links/20; type=text; label=LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:tsce.tutorial.singleViewPid
+				singleViewPid =
+				# cat=plugin.tx_njtutorials_model_tutorial/links/30; type=text; label=LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:tsce.tutorial.archivePid
+				archivePid =
+			}
+		}
+	}
+	
+	persistence {
+		# cat=plugin.tx_njtutorials_persistence/links/10; type=text; label=Default storage PID
+		storagePid =
+	}
+		
+	view {
+		# cat=plugin.tx_njtutorials_view/file/10; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:nj_tutorials/Resources/Private/Templates/
+		# cat=plugin.tx_njtutorials_view/file/20; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:nj_tutorials/Resources/Private/Partials/
+		# cat=plugin.tx_njtutorials_view/file/30; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:nj_tutorials/Resources/Private/Layouts/
+	}	
+}

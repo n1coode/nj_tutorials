@@ -1,0 +1,197 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms.tab.settingsGeneral</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.flexform.settings.general.typoScript>
+						<TCEforms>
+							<onChange>reload</onChange>
+							<label>LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms.label.general.typoScript</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms.option.general.no</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms.option.general.yes</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+								<maxitems>1</maxitems>
+								<size>1</size>
+							</config>
+						</TCEforms>
+					</settings.flexform.settings.general.typoScript>
+
+					<settings.flexform.persistence.storagePid>
+						<TCEforms>
+							<label>LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms.label.persistence.storagePid</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>1</minitems>
+							</config>		
+						</TCEforms>
+					</settings.flexform.persistence.storagePid>
+						
+					<!-- View -->
+					<switchableControllerActions>
+						<TCEforms>
+							<label>LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms_general.mode</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.category.random</numIndex>
+										<numIndex index="1">Category->random</numIndex>
+									</numIndex>
+									<numIndex index="11">
+										<numIndex index="0">Digest</numIndex>
+										<numIndex index="1">Tutorial->digest</numIndex>
+									</numIndex>
+									<numIndex index="12">
+										<numIndex index="0">LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.tutorial.focus</numIndex>
+										<numIndex index="1">Tutorial->focus</numIndex>
+									</numIndex>
+									<numIndex index="13">
+										<numIndex index="0">LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.tutorial.index</numIndex>
+										<numIndex index="1">Tutorial->index</numIndex>
+									</numIndex>
+									<numIndex index="14">
+										<numIndex index="0">LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.tutorial.list</numIndex>
+										<numIndex index="1">Tutorial->list;Tutorial->focus</numIndex>
+									</numIndex>
+									<numIndex index="15">
+										<numIndex index="0">LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.tutorial.search</numIndex>
+										<numIndex index="1">Tutorial->search</numIndex>
+									</numIndex>
+									<numIndex index="16">
+										<numIndex index="0">LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.tutorial.tagCloud</numIndex>
+										<numIndex index="1">Tutorial->tagCloud</numIndex>
+									</numIndex>
+									<numIndex index="17">
+										<numIndex index="0">LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.tutorial.teaser</numIndex>
+										<numIndex index="1">Tutorial->teaser</numIndex>
+									</numIndex>
+									<numIndex index="18">
+										<numIndex index="0">Latest</numIndex>
+										<numIndex index="1">Tutorial->latest</numIndex>
+									</numIndex>
+								</items> 
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+				</el>
+			</ROOT>
+		</sDEF>
+		<sPIDS>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms.tab.pageIds</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.flexform.settings.model.tutorial.listPid>
+						<TCEforms> 
+        					<label>Seiten-ID mit der Listen-Ansicht:</label>
+       						<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+							</config>	
+      					</TCEforms>
+					</settings.flexform.settings.model.tutorial.listPid>
+					
+					<settings.flexform.settings.model.tutorial.singleViewPid>
+						<TCEforms> 
+        					<label>Seiten-ID mit der Einzelansicht:</label>
+       						<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+							</config>	
+      					</TCEforms>
+					</settings.flexform.settings.model.tutorial.singleViewPid>
+					
+					<settings.flexform.settings.model.tutorial.archivePid>
+						<TCEforms> 
+        					<label>Seiten-ID mit der Archiv-Ansicht:</label>
+       						<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+							</config>	
+      					</TCEforms>
+					</settings.flexform.settings.model.tutorial.archivePid>
+				</el>
+			</ROOT>
+		</sPIDS>
+		
+		<sCONTROLLER_CATEGORY>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms.tab.controller.category</sheetTitle>
+					<displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Category->random]]></displayCond>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.flexform.settings.model.category.quantity>
+						<TCEforms>
+							<label>LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms.label.general.category.quantity</label>
+							<config>
+  								<type>input</type>
+								<size>5</size>
+							</config>
+						</TCEforms>	
+					</settings.flexform.settings.model.category.quantity>
+				</el>
+			</ROOT>
+		</sCONTROLLER_CATEGORY>
+		<sCONTROLLER_TEASER>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:nj_tutorials/Resources/Private/Language/locallang_be.xml:flexforms.tab.controller.category</sheetTitle>
+					<displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Tutorial->teaser]]></displayCond>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.flexform.settings.model.tutorial.teaser.category>
+						<TCEforms>
+							<label>Kategorie</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_njtutorials_domain_model_category</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>1</minitems>
+							</config>
+						</TCEforms>	
+					</settings.flexform.settings.model.tutorial.teaser.category>
+				</el>
+			</ROOT>
+		</sCONTROLLER_TEASER>
+	</sheets>
+</T3DataStructure>

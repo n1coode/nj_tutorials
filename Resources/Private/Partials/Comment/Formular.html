@@ -1,0 +1,26 @@
+<div class="tx_njtutorials tutorial comment add">
+	<div class="container">
+		<h4>Hinterlasse einen Kommentar</h4>
+			Deine E-Mail-Adresse wird nicht veröffentlicht. Erforderliche Felder sind markiert *
+		<f:form enctype="multipart/form-data">
+			<f:security.ifAuthenticated>
+				<f:then>
+
+				</f:then> 
+				<f:else>
+					<f:render section="input" arguments="{id:'name',value:'{commentData.name}'}" />
+				</f:else>
+			</f:security.ifAuthenticated>
+			<f:form.textarea cols="20" rows="5" id="message" name="message" value="{commentData.message}" />
+			<div class="submit clearfix">
+					<f:form.submit name="submitCommentData" value="{f:translate(key:'comment.submit.data', default:'Kommentar senden')}" />
+					<f:form.submit name="cancel" value="{f:translate(key:'comment.submit.cancel', default:'Abbrechen')}" />
+			</div>
+		</f:form>
+	</div>
+</div>
+
+<f:section name="input">
+	<label for="{id}"><f:translate key="comment.form.label.{id}" /></label>
+	<f:form.textfield id="{id}" name="{id}" value="{value}" />
+</f:section>

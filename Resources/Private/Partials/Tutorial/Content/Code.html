@@ -1,0 +1,8 @@
+{namespace f=N1coode\NjCollection\ViewHelpers}
+{namespace f=N1coode\NjTutorials\ViewHelpers}
+<f:if condition="{item.headlineHidden}<1">
+	<f:if condition="{item.headline}">
+		<{item.headlineStyle}>{item.headline}</{item.headlineStyle}>
+	</f:if>
+</f:if>
+<f:code code="{item.code}" language="{item.codeLang}" startingLine="{item.codeStartingLine}" highlightLines="{item.codeHighlightLines}" highlightColor="{item.codeHighlightColor}" />

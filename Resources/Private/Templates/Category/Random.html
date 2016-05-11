@@ -1,0 +1,16 @@
+{namespace njVH=N1coode\NjTutorials\ViewHelpers}
+{namespace njcVH=N1coode\NjCollection\ViewHelpers}
+<div class="tx_njtutorials category random clearfix">
+	<f:if condition="{categories}">
+		<f:for each="{categories}" as="category" iteration="categoryIterator">
+			<div class="item {f:if(condition:'{categoryIterator.isEven}',then:' even',else:' odd')}{f:if(condition:'{categoryIterator.isLast}',then:' last',else:'')}{f:if(condition:'{category.titleAlt}',then:' {category.titleAlt}',else:'')}" tx_njtutorials_category="{category.uid}">
+				<div class="headline"><h2>{category.title}</h2></div>
+			</div>
+		</f:for>
+		<style>
+			.tx_njtutorials.category > .item {
+				background-image:url("{f:uri.image(src:'EXT:nj_tutorials/Resources/Public/Gfx/bg_category.png')}");
+			}
+		</style>
+	</f:if>
+</div>

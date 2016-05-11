@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-10-06" product-name="nj_tutorials">
+		<header/>
+		<body>
+			<trans-unit id="label.model.category.isSubcategory" xml:space="preserve">
+				<source>Is sub category</source>
+			</trans-unit>
+			<trans-unit id="label.model.category.mainCategory" xml:space="preserve">
+				<source>Main category</source>
+			</trans-unit>
+			<trans-unit id="label.model.category.titleAlternative" xml:space="preserve">
+				<source>Alternative title</source>
+			</trans-unit>
+			<trans-unit id="label.model.tutorial.conclusion" xml:space="preserve">
+				<source>Conclusion</source>
+			</trans-unit>
+			<trans-unit id="label.model.tutorial.motivation" xml:space="preserve">
+				<source>Motivation</source>
+			</trans-unit>
+			<trans-unit id="label.model.tutorial.relatedTutorials" xml:space="preserve">
+				<source>Related tutorials</source>
+			</trans-unit>
+			<trans-unit id="label.model.tutorial.tags" xml:space="preserve">
+				<source>Tags</source>
+			</trans-unit>
+			<trans-unit id="model.category" xml:space="preserve">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="model.tag" xml:space="preserve">
+				<source>Tag</source>
+			</trans-unit>
+			<trans-unit id="model.tutorial" xml:space="preserve">
+				<source>Tutorial</source>
+			</trans-unit>
+			<trans-unit id="plugin.title" xml:space="preserve">
+				<source>njs Tutorials</source>
+			</trans-unit>
+			<trans-unit id="tab.model.tutorial.abstract" xml:space="preserve">
+				<source>Abstract</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

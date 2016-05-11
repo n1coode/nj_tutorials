@@ -1,0 +1,7 @@
+{namespace njVH=N1coode\NjTutorials\ViewHelpers}
+<f:if condition="{item.headlineHidden}<1">
+	<f:if condition="{item.headline}">
+		<{item.headlineStyle}>{item.headline}</{item.headlineStyle}>
+	</f:if>
+</f:if>
+<f:format.raw>{item.content}</f:format.raw>

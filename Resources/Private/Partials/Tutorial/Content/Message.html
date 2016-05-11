@@ -1,0 +1,9 @@
+{namespace njVH=N1coode\NjTutorials\ViewHelpers}
+<div class="n1message {item.messageType}">
+	<f:if condition="{item.headlineHidden}<1">
+		<f:if condition="{item.headline}">
+			<h2>{item.headline}</h2>
+		</f:if>
+	</f:if>
+	<f:format.raw>{item.message}</f:format.raw>
+</div>

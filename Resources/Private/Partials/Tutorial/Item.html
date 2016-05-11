@@ -1,0 +1,84 @@
+{namespace njVH=N1coode\NjTutorials\ViewHelpers}
+{namespace njcVH=N1coode\NjCollection\ViewHelpers}
+<article>
+	<div class="headline"><h3>{tutorial.title}</h3></div>
+	<div class="meta">
+		<ul>
+			<li>
+
+
+
+				<i class="fa fa-clock-o"></i><f:format.date format="d.m.Y">{tutorial.crdate}</f:format.date> &ndash; <f:format.date format="H:i">{tutorial.crdate}</f:format.date> Uhr<f:if condition="{tutorial.cruserId}"> // <i class="fa fa-user"></i>{tutorial.cruserId.username}</f:if>
+				<f:if condition="{tutorial.commentsEnable}">
+					//<span><a href="{f:uri.page(absolute:1,addQueryString:1)}#comments">
+					<f:if condition="{tutorial.comments}==1">
+						<f:then><i class="fa fa-comment"></i>{tutorial.comments} Kommentar</f:then>
+						<f:else><i class="fa fa-comments"></i>{tutorial.comments} Kommentare</f:else>
+					</f:if>
+						</a>
+					</span>
+				</f:if>
+
+			</li>
+			<f:if condition="{tutorial.category}">
+				<li>
+					<i class="fa fa-hand-o-right"></i><f:translate key="category">Kategorie</f:translate>: {tutorial.category.title}
+				</li>
+			</f:if>
+		</ul>
+	</div>
+</article>
+<f:if condition="{settings.ext.action}=='focus'">
+	<f:if condition="{tutorial.motivation}">
+		<div class="motivation">
+			<div class="container">
+				<f:format.raw>{tutorial.motivation}</f:format.raw>
+			</div>
+		</div>
+	</f:if>
+</f:if>
+
+<f:if condition="{tutorial.content}">
+	<div class="content">
+		<f:for each="{tutorial.content}" as="item" iteration="itemIterator">
+			<div class="item {item.contentType}">
+				<f:render partial="{ext.controller}/Content/{njcVH:TextTransform(text:'{item.ctype}', action:'ucfirst')}" arguments="{item:item}" />
+			</div>
+		</f:for>
+	</div>
+</f:if>
+<f:if condition="{settings.ext.action}=='focus'">
+	<f:if condition="{tutorial.conclusion}">
+		<div class="conclusion">
+			<div class="container">
+				<f:format.raw>{tutorial.conclusion}</f:format.raw>
+			</div>
+		</div>
+	</f:if>
+	<f:if condition="{tutorial.tags}">
+		<div class="tags">
+			<ul class="clearfix">
+				<f:for each="{tutorial.tags}" as="tag" iteration="tagIterator">
+					<li><f:link.action pageUid="{settings.model.tutorial.listPid}" controller="{settings.ext.controller}" action="list" arguments="{tag:'{tag.uid}'}">{tag.title}</f:link.action></li>
+				</f:for>
+			</ul>
+		</div>
+	</f:if>
+	<f:if condition="{tutorial.relatedTutorials}">
+		<div class="related">
+			<h3><f:translate key="relatedTutorials">&Auml;hnliche Tutorials</f:translate></h3>
+			<f:for each="{tutorial.relatedTutorials}" as="related" iteration="relatedIterator">
+				<div class="item">
+					<f:link.action pageUid="{settings.model.tutorial.singleViewPid}" controller="{settings.ext.controller}" action="focus" arguments="{tutorial:'{related.uid}'}">{related.title}</f:link.action>
+				</div>
+			</f:for>
+		</div>
+	</f:if>
+	<f:if condition="{tutorial.commentsEnable}">
+		<div class="comments">
+			<h3><a name="comments">{tutorial.comments} <f:translate key="comments">Kommentare</f:translate></a></h3>
+			<f:render partial="Comment/Formular" arguments="{_all}" />
+			<f:render partial="Comment/Index" arguments="{comments:'{comments}'}" />
+		</div>
+	</f:if>
+</f:if>

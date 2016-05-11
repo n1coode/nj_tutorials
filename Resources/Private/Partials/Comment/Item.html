@@ -1,0 +1,28 @@
+<div class="tx_njtutorials comments item clearfix">
+	<div class="author">
+		<f:if condition="{comment.author}">
+			<f:then>
+				<f:if condition="{comment.author.image}">
+					<f:then>
+						
+					</f:then>
+					<f:else>
+						<div class="img"><f:image src="fileadmin/layout/_all/gfx/icons/user_bright.png" /></div>
+					</f:else>
+				</f:if>
+			</f:then>
+			<f:else>
+				<div class="img"><f:image src="fileadmin/layout/_all/gfx/icons/user_bright.png" /></div>
+			</f:else>
+		</f:if>
+	</div>
+	<div class="comment">
+		<div class="meta">
+			<f:if condition="{comment.author}"><f:then>{comment.author.username}</f:then><f:else>{comment.name}</f:else></f:if> | 
+			<f:format.date format="d.m.Y">{comment.crdate}</f:format.date> &ndash; <f:format.date format="H:i">{comment.crdate}</f:format.date> Uhr
+		</div>
+		<div class="bubble">
+			<f:format.raw>{comment.content}</f:format.raw>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+{namespace f=N1coode\NjCollection\ViewHelpers}
+<f:wrapExtension settings="{ext}">
+	<f:if condition="{tutorials}">
+		<f:then>
+			<ul>
+				<f:for each="{tutorials}" as="tutorial" iteration="iterator">
+					<li>
+					<f:render partial="{ext.controller}/Item" arguments="{_all}" />
+					</li>
+				</f:for>
+			</ul>
+		</f:then>
+		<f:else></f:else>
+	</f:if>
+</f:wrapExtension>
