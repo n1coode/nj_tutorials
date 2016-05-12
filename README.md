@@ -1,2 +1,2 @@
 # nj_tutorials
-tbc
+TYPO3 extension
